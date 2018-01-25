@@ -19,6 +19,8 @@ class TestSequenceFunctions(unittest.TestCase):  # pylint: disable=R0904
         """
         corpus_importer = CorpusImporter('latin')
         corpus_importer.import_corpus('latin_text_latin_library')
+        import subprocess
+        subprocess.call(['ls','/home/travis/cltk_data/latin/text/latin_text_latin_library'])
         from cltk.book.latin import Latin
         self.text1 = Latin.text1
         
