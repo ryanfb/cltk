@@ -20,6 +20,7 @@ class TestSequenceFunctions(unittest.TestCase):  # pylint: disable=R0904
         corpus_importer = CorpusImporter('latin')
         corpus_importer.import_corpus('latin_text_latin_library')
         from cltk.book.latin import Latin
+        Latin = importlib.reload(cltk.book.latin).Latin
         self.text1 = Latin.text1
         
         
